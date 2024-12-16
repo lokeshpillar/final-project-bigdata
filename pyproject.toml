@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "nyc-opendata"
+version = "0.1.0"
+description = ""
+authors = ["Lokesh Reddy Pillari <pillar45@students.rowan.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+jupyter = "^1.1.1"
+matplotlib = "^3.9.3"
+pandas = "^2.2.3"
+pymongo = "^4.10.1"
+python = "^3.9"
+requests = "^2.32.3"
+seaborn = "^0.13.2"
+tqdm = "^4.67.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[tool.poetry.scripts]
+reset = "nyc_opendata.reset:main"
+ingest = "nyc_opendata.data_ingestion:main"
+clean = "nyc_opendata.data_cleaning:main"
+gold = "nyc_opendata.gold_layer:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
